@@ -31,7 +31,9 @@ rdkit.initialise().then(() => {
     const smilesList = req.body.smiles;
     const response = {};
 
-    console.log(`Processing ${smilesList.length} SMILES`);
+    console.log(
+      `${new Date().toISOString()} Processing ${smilesList.length} SMILES`
+    );
 
     const groups = groupBy(smilesList, (v) => v);
 
